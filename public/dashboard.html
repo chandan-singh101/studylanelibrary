@@ -1,57 +1,176 @@
 <!-- admin.html -->
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Order Management - Study Lane Library</title>
     <style>
-        table { width: 100%; border-collapse: collapse; }
-        th, td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }
-        th { background-color: #f2f2f2; }
-        .pending { background-color: #fff3cd; }
-        .delivered { background-color: #d4edda; }
-        select { padding: 5px; }
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #fafafa;
+        color: #333;
+      }
+
+      h1 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 30px;
+      }
+
+      .filter-section {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 25px;
+      }
+
+      label {
+        font-weight: 600;
+      }
+
+      select {
+        padding: 8px 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #fff;
+        cursor: pointer;
+        transition: border-color 0.3s;
+      }
+
+      select:hover {
+        border-color: #007bff;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      thead {
+        background-color: #007bff;
+        color: white;
+      }
+
+      th,
+      td {
+        padding: 12px 15px;
+        text-align: left;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f8f9fa;
+      }
+
+      tr:hover {
+        background-color: #e9f2ff;
+      }
+
+      .pending {
+        background-color: #fff3cd;
+      }
+
+      .delivered {
+        background-color: #d4edda;
+      }
+
+      .status-success {
+        color: #28a745;
+        font-weight: bold;
+      }
+
+      .status-pending {
+        color: #ffc107;
+        font-weight: bold;
+      }
+
+      .status-failed {
+        color: #dc3545;
+        font-weight: bold;
+      }
+
+      button {
+        padding: 6px 12px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      .btn-update {
+        background-color: #007bff;
+        color: #fff;
+      }
+
+      .btn-update:hover {
+        background-color: #0056b3;
+      }
+
+      .btn-delete {
+        background-color: #dc3545;
+        color: #fff;
+      }
+
+      .btn-delete:hover {
+        background-color: #b02a37;
+      }
     </style>
-</head>
-<body>
-    <h1>Order Management</h1>
-    <div>
-        <label>Filter by Status:</label>
+  </head>
+  <body>
+    <h1>📦 Order Management</h1>
+
+    <div class="filter-section">
+      <div>
+        <label for="statusFilter">Filter by Payment Status:</label>
         <select id="statusFilter">
-            <option value="all">All</option>
-            <option value="pending">Pending</option>
-            <option value="success">Success</option>
-            <option value="failed">Failed</option>
+          <option value="all">All</option>
+          <option value="pending">Pending</option>
+          <option value="success">Success</option>
+          <option value="failed">Failed</option>
         </select>
+      </div>
+
+      <div>
+        <label for="deliveryFilter">Filter by Delivery Status:</label>
         <select id="deliveryFilter">
-            <option value="all">All Delivery Status</option>
-            <option value="pending">Pending Delivery</option>
-            <option value="preparing">Preparing</option>
-            <option value="in_transit">In Transit</option>
-            <option value="delivered">Delivered</option>
+          <option value="all">All Delivery Status</option>
+          <option value="pending">Pending Delivery</option>
+          <option value="preparing">Preparing</option>
+          <option value="in_transit">In Transit</option>
+          <option value="delivered">Delivered</option>
         </select>
+      </div>
     </div>
+
     <table id="ordersTable">
-        <thead>
-            <tr>
-                <th>Order ID</th>
-                <th>Customer</th>
-                <th>Phone</th>
-                <th>Seat</th>
-                <th>Amount</th>
-                <th>Payment Status</th>
-                <th>Delivery Status</th>
-                <th>Order Time</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody id="ordersBody">
-            <!-- Orders will be populated here -->
-        </tbody>
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Customer</th>
+          <th>Phone</th>
+          <th>Seat</th>
+          <th>Amount</th>
+          <th>Payment Status</th>
+          <th>Delivery Status</th>
+          <th>Order Time</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="ordersBody">
+        <!-- Orders will be dynamically populated here -->
+      </tbody>
     </table>
 
     <script>
-        // JavaScript to fetch and display orders
-        // Implement functionality to update delivery status
+      // Placeholder for dynamic order management logic
+      // TODO: Fetch order data from backend or local storage and display in the table
+      // TODO: Add update and filter functionality
     </script>
-</body>
+  </body>
 </html>
